@@ -2,67 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-    }
-    .login-container {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 300px;
-    }
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 0.5rem 0 1rem 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #0056b3;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <button type="submit">Log In</button>
-    </form>
-  </div>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">My Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <button class="toggle-mode" onclick="toggleTheme()">🌓</button>
+    </nav>
+  </header>
 
-  <script>
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const user = document.getElementById('username').value;
-  const pass = document.getElementById('password').value;
-  if (user === 'admin' && pass === 'password123') {
-    window.location.href = 'home.html'; // Redirect to home page
-  } else {
-    alert('Invalid credentials. Try again.');
-  }
-});
-  </script>
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>This is my digital hub for all creative and professional work.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Coming soon: a showcase of everything I’ve built, designed, or collaborated on.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Drop me a line at: <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
